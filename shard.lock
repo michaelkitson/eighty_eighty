@@ -1,0 +1,18 @@
+version: 1.0
+shards:
+  crystglfw:
+    github: calebuharrison/CrystGLFW
+    commit: 7e97b4ad0a5271c3da378058623056b7fa33e084
+
+  gl:
+    github: oprypin/crystal-raw-gl
+    commit: b629fab8018041d63d4ea63ff5f01300d1d3ed0e
+
+  lib_gl:
+    github: calebuharrison/LibGL
+    commit: 9a05aef8f2f8dbc43f821e5ca104458be85a2a30
+
+  lib_glfw:
+    github: calebuharrison/LibGLFW
+    commit: 4cf7c3774f278d7e044bb30a35b104f5b12fdc53
+

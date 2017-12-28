@@ -1,0 +1,23 @@
+name: eighty_eighty
+version: 0.1.0
+
+authors:
+  - Michael Kitson <michaelskitson@gmail.com>
+
+targets:
+  eightyeighty:
+    main: src/eighty_eighty.cr
+
+crystal: 0.23.1
+
+license: MIT
+
+dependencies:
+  crystglfw:
+    github: calebuharrison/CrystGLFW
+    branch: master
+  lib_gl:
+    github: calebuharrison/LibGL
+    branch: master
+  gl:
+    github: oprypin/crystal-raw-gl
