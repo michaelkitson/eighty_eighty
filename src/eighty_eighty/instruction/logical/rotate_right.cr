@@ -6,5 +6,6 @@ module EightyEighty::Instruction::Logical::RotateRight
     state.a >>= 1
     state.a |= 128 if state.cc.carry
     state.pc += 1
+    4
   end
 end

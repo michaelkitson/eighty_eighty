@@ -6,6 +6,7 @@ module EightyEighty::Instruction::Branch::CallConditional
       Call.run(state)
     else
       state.pc += 3
+      11
     end
   end
 end

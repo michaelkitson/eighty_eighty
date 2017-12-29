@@ -3,5 +3,6 @@ module EightyEighty::Instruction::StackIOControl::NoOperation
 
   def self.run(state : State)
     state.pc += 1
+    4
   end
 end

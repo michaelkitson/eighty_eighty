@@ -6,5 +6,6 @@ module EightyEighty::Instruction::StackIOControl::PopProcessorStatusWord
     state.a = state.memory[state.sp + 1]
     state.sp += 2
     state.pc += 1
+    10
   end
 end

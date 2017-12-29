@@ -6,7 +6,7 @@ describe EightyEighty::Instruction::DataTransfer::MoveToMemory do
     state.memory = Bytes.new((1 << 8) + 8)
     state.memory[0] = 0b01110101_u8
     state.hl = 0x0102_u16
-    EightyEighty::Instruction::DataTransfer::MoveToMemory.run(state)
+    EightyEighty::Instruction::DataTransfer::MoveToMemory.run(state).should eq(7)
     state.memory[(1 << 8) + 2].should eq(2_u8)
     state.pc.should eq(1)
   end

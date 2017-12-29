@@ -5,7 +5,7 @@ describe EightyEighty::Instruction::StackIOControl::Pop do
     state = EightyEighty::State.new
     state.memory = Bytes[0, 0, 0, 0, 0, 0, 0, 0, 2, 1]
     state.sp = 8_u16
-    EightyEighty::Instruction::StackIOControl::Pop.run(state)
+    EightyEighty::Instruction::StackIOControl::Pop.run(state).should eq(10)
     state.b.should eq(1)
     state.c.should eq(2)
     state.pc.should eq(1)
@@ -16,7 +16,7 @@ describe EightyEighty::Instruction::StackIOControl::Pop do
     state = EightyEighty::State.new
     state.memory = Bytes[1 << 4, 0, 0, 0, 0, 0, 0, 0, 2, 1]
     state.sp = 8_u16
-    EightyEighty::Instruction::StackIOControl::Pop.run(state)
+    EightyEighty::Instruction::StackIOControl::Pop.run(state).should eq(10)
     state.d.should eq(1)
     state.e.should eq(2)
     state.pc.should eq(1)
@@ -27,7 +27,7 @@ describe EightyEighty::Instruction::StackIOControl::Pop do
     state = EightyEighty::State.new
     state.memory = Bytes[2 << 4, 0, 0, 0, 0, 0, 0, 0, 2, 1]
     state.sp = 8_u16
-    EightyEighty::Instruction::StackIOControl::Pop.run(state)
+    EightyEighty::Instruction::StackIOControl::Pop.run(state).should eq(10)
     state.h.should eq(1)
     state.l.should eq(2)
     state.pc.should eq(1)

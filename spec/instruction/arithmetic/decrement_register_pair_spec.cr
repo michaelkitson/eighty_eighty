@@ -5,7 +5,7 @@ describe EightyEighty::Instruction::Arithmetic::DecrementRegisterPair do
     state = EightyEighty::State.new
     state.memory = Bytes[0b00001011]
     state.bc = 256_u16
-    EightyEighty::Instruction::Arithmetic::DecrementRegisterPair.run(state)
+    EightyEighty::Instruction::Arithmetic::DecrementRegisterPair.run(state).should eq(5)
     state.bc.should eq(255)
     state.pc.should eq(1)
     state.cc.zero.should be_false
@@ -17,7 +17,7 @@ describe EightyEighty::Instruction::Arithmetic::DecrementRegisterPair do
   it "decrements de" do
     state = EightyEighty::State.new
     state.memory = Bytes[0b00011011]
-    EightyEighty::Instruction::Arithmetic::DecrementRegisterPair.run(state)
+    EightyEighty::Instruction::Arithmetic::DecrementRegisterPair.run(state).should eq(5)
     state.de.should eq(65535)
     state.pc.should eq(1)
     state.cc.zero.should be_false
@@ -30,7 +30,7 @@ describe EightyEighty::Instruction::Arithmetic::DecrementRegisterPair do
     state = EightyEighty::State.new
     state.memory = Bytes[0b00101011]
     state.hl = 1_u16
-    EightyEighty::Instruction::Arithmetic::DecrementRegisterPair.run(state)
+    EightyEighty::Instruction::Arithmetic::DecrementRegisterPair.run(state).should eq(5)
     state.hl.should eq(0)
     state.pc.should eq(1)
     state.cc.zero.should be_true
@@ -43,7 +43,7 @@ describe EightyEighty::Instruction::Arithmetic::DecrementRegisterPair do
     state = EightyEighty::State.new
     state.memory = Bytes[0b00111011]
     state.sp = 2_u16
-    EightyEighty::Instruction::Arithmetic::DecrementRegisterPair.run(state)
+    EightyEighty::Instruction::Arithmetic::DecrementRegisterPair.run(state).should eq(5)
     state.sp.should eq(1)
     state.pc.should eq(1)
     state.cc.zero.should be_false

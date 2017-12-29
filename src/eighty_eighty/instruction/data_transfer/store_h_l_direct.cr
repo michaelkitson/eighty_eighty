@@ -5,5 +5,6 @@ module EightyEighty::Instruction::DataTransfer::StoreHLDirect
     state.memory[state.read_instruction_u16] = state.l
     state.memory[state.read_instruction_u16 + 1] = state.h
     state.pc += 3
+    16
   end
 end

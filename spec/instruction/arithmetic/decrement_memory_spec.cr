@@ -6,7 +6,7 @@ describe EightyEighty::Instruction::Arithmetic::DecrementMemory do
     state.memory = Bytes.new((1 << 8) + 8)
     state.memory[(1 << 8) + 2] = 4_u8
     state.hl = 0x0102_u16
-    EightyEighty::Instruction::Arithmetic::DecrementMemory.run(state)
+    EightyEighty::Instruction::Arithmetic::DecrementMemory.run(state).should eq(10)
     state.memory[(1 << 8) + 2].should eq(3_u8)
     state.pc.should eq(1)
     state.cc.zero.should be_false

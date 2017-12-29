@@ -7,5 +7,6 @@ module EightyEighty::Instruction::Arithmetic::DecrementMemory
     state.cc.set_from(result)
     state.cc.carry = result == 0xFF
     state.pc += 1
+    10
   end
 end

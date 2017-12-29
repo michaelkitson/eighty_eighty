@@ -7,7 +7,7 @@ describe EightyEighty::Instruction::DataTransfer::MoveRegister do
     state = EightyEighty::State.new
     state.memory = Bytes[base_op | 0b00111000, 1]
     state.b = 1_u8
-    EightyEighty::Instruction::DataTransfer::MoveRegister.run(state)
+    EightyEighty::Instruction::DataTransfer::MoveRegister.run(state).should eq(5)
     state.b.should eq(1)
     state.a.should eq(1)
     state.pc.should eq(1)
@@ -17,7 +17,7 @@ describe EightyEighty::Instruction::DataTransfer::MoveRegister do
     state = EightyEighty::State.new
     state.memory = Bytes[base_op | 0b00101010, 1]
     state.d = 2_u8
-    EightyEighty::Instruction::DataTransfer::MoveRegister.run(state)
+    EightyEighty::Instruction::DataTransfer::MoveRegister.run(state).should eq(5)
     state.d.should eq(2)
     state.l.should eq(2)
     state.pc.should eq(1)

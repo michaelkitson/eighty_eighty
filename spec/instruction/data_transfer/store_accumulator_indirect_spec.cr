@@ -8,7 +8,7 @@ describe EightyEighty::Instruction::DataTransfer::StoreAccumulatorIndirect do
     state.a = 3_u8
     state.b = 1_u8
     state.c = 2_u8
-    EightyEighty::Instruction::DataTransfer::StoreAccumulatorIndirect.run(state)
+    EightyEighty::Instruction::DataTransfer::StoreAccumulatorIndirect.run(state).should eq(7)
     state.memory[(1 << 8) + 2].should eq(3)
     state.b.should eq(1)
     state.c.should eq(2)
@@ -25,7 +25,7 @@ describe EightyEighty::Instruction::DataTransfer::StoreAccumulatorIndirect do
     state.a = 3_u8
     state.d = 1_u8
     state.e = 2_u8
-    EightyEighty::Instruction::DataTransfer::StoreAccumulatorIndirect.run(state)
+    EightyEighty::Instruction::DataTransfer::StoreAccumulatorIndirect.run(state).should eq(7)
     state.memory[(1 << 8) + 2].should eq(3)
     state.d.should eq(1)
     state.e.should eq(2)

@@ -8,5 +8,6 @@ module EightyEighty::Instruction::Arithmetic::AddMemory
     state.cc.carry = result < initial
     state.cc.auxiliary_carry = (result & 0xF) < (initial & 0xF)
     state.pc += 1
+    7
   end
 end

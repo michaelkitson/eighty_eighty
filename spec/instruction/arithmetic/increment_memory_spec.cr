@@ -6,7 +6,7 @@ describe EightyEighty::Instruction::Arithmetic::IncrementMemory do
     state.memory = Bytes.new((1 << 8) + 8)
     state.memory[(1 << 8) + 2] = 255_u8
     state.hl = 0x0102_u16
-    EightyEighty::Instruction::Arithmetic::IncrementMemory.run(state)
+    EightyEighty::Instruction::Arithmetic::IncrementMemory.run(state).should eq(10)
     state.memory[(1 << 8) + 2].should eq(0_u8)
     state.cc.zero.should be_true
     state.cc.signed.should be_false

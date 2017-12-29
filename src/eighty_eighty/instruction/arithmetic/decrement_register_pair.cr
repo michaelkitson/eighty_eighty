@@ -6,5 +6,6 @@ module EightyEighty::Instruction::Arithmetic::DecrementRegisterPair
     state.cc.set_from(result)
     state.cc.carry = result == 0xFFFF
     state.pc += 1
+    5
   end
 end

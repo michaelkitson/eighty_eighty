@@ -6,5 +6,6 @@ module EightyEighty::Instruction::Arithmetic::AddRegisterPairToHL
     result = state.hl += state.register_pair
     state.cc.carry = result < initial
     state.pc += 1
+    10
   end
 end

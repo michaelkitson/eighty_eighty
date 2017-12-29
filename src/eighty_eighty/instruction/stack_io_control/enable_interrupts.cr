@@ -4,5 +4,6 @@ module EightyEighty::Instruction::StackIOControl::EnableInterrupts
   def self.run(state : State)
     state.interrupts_enabled = true
     state.pc += 1
+    4
   end
 end

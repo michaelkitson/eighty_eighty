@@ -7,5 +7,6 @@ module EightyEighty::Instruction::Logical::ExclusiveOrRegister
     state.cc.carry = false
     state.cc.auxiliary_carry = false
     state.pc += 1
+    4
   end
 end

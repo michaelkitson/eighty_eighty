@@ -8,7 +8,7 @@ describe EightyEighty::Instruction::DataTransfer::LoadHLDirect do
     state.memory[2] = 1_u8
     state.memory[(1 << 8) + 2] = 3_u8
     state.memory[(1 << 8) + 3] = 4_u8
-    EightyEighty::Instruction::DataTransfer::LoadHLDirect.run(state)
+    EightyEighty::Instruction::DataTransfer::LoadHLDirect.run(state).should eq(16)
     state.h.should eq(4)
     state.l.should eq(3)
     state.pc.should eq(3)

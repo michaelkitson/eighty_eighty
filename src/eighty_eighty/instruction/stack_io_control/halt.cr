@@ -4,5 +4,6 @@ module EightyEighty::Instruction::StackIOControl::Halt
   def self.run(state : State)
     puts "Halting"
     exit(0)
+    7
   end
 end

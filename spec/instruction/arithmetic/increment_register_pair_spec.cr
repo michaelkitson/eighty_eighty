@@ -5,7 +5,7 @@ describe EightyEighty::Instruction::Arithmetic::IncrementRegisterPair do
     state = EightyEighty::State.new
     state.memory = Bytes[0b00000011]
     state.bc = 255_u16
-    EightyEighty::Instruction::Arithmetic::IncrementRegisterPair.run(state)
+    EightyEighty::Instruction::Arithmetic::IncrementRegisterPair.run(state).should eq(5)
     state.bc.should eq(256)
     state.pc.should eq(1)
     state.cc.zero.should be_false
@@ -17,7 +17,7 @@ describe EightyEighty::Instruction::Arithmetic::IncrementRegisterPair do
   it "increments de" do
     state = EightyEighty::State.new
     state.memory = Bytes[0b00010011]
-    EightyEighty::Instruction::Arithmetic::IncrementRegisterPair.run(state)
+    EightyEighty::Instruction::Arithmetic::IncrementRegisterPair.run(state).should eq(5)
     state.de.should eq(1)
     state.pc.should eq(1)
     state.cc.zero.should be_false
@@ -30,7 +30,7 @@ describe EightyEighty::Instruction::Arithmetic::IncrementRegisterPair do
     state = EightyEighty::State.new
     state.memory = Bytes[0b00100011]
     state.hl = 0_u16 - 1_u16
-    EightyEighty::Instruction::Arithmetic::IncrementRegisterPair.run(state)
+    EightyEighty::Instruction::Arithmetic::IncrementRegisterPair.run(state).should eq(5)
     state.hl.should eq(0)
     state.pc.should eq(1)
     state.cc.zero.should be_true
@@ -43,7 +43,7 @@ describe EightyEighty::Instruction::Arithmetic::IncrementRegisterPair do
     state = EightyEighty::State.new
     state.memory = Bytes[0b00110011]
     state.sp = 1_u16
-    EightyEighty::Instruction::Arithmetic::IncrementRegisterPair.run(state)
+    EightyEighty::Instruction::Arithmetic::IncrementRegisterPair.run(state).should eq(5)
     state.sp.should eq(2)
     state.pc.should eq(1)
     state.cc.zero.should be_false

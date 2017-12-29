@@ -5,7 +5,7 @@ describe EightyEighty::Instruction::Arithmetic::IncrementRegister do
     state = EightyEighty::State.new
     state.memory = Bytes[0, 0]
     state.b = 255_u8
-    EightyEighty::Instruction::Arithmetic::IncrementRegister.run(state)
+    EightyEighty::Instruction::Arithmetic::IncrementRegister.run(state).should eq(5)
     state.b.should eq(0)
     state.pc.should eq(1)
     state.cc.zero.should be_true
@@ -17,7 +17,7 @@ describe EightyEighty::Instruction::Arithmetic::IncrementRegister do
   it "increments c" do
     state = EightyEighty::State.new
     state.memory = Bytes[0b1000, 0]
-    EightyEighty::Instruction::Arithmetic::IncrementRegister.run(state)
+    EightyEighty::Instruction::Arithmetic::IncrementRegister.run(state).should eq(5)
     state.c.should eq(1)
     state.pc.should eq(1)
     state.cc.zero.should be_false

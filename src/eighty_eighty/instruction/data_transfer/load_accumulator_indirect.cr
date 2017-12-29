@@ -8,5 +8,6 @@ module EightyEighty::Instruction::DataTransfer::LoadAccumulatorIndirect
               else        raise "Invalid Register Source"
               end
     state.pc += 1
+    7
   end
 end

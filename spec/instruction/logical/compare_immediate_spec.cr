@@ -5,7 +5,7 @@ describe EightyEighty::Instruction::Logical::CompareImmediate do
     state = EightyEighty::State.new
     state.memory = Bytes[0, 1]
     state.a = 1_u8
-    EightyEighty::Instruction::Logical::CompareImmediate.run(state)
+    EightyEighty::Instruction::Logical::CompareImmediate.run(state).should eq(7)
     state.a.should eq(1)
     state.pc.should eq(2)
     state.cc.zero.should be_true
@@ -19,7 +19,7 @@ describe EightyEighty::Instruction::Logical::CompareImmediate do
     state = EightyEighty::State.new
     state.memory = Bytes[0, 2]
     state.a = 1_u8
-    EightyEighty::Instruction::Logical::CompareImmediate.run(state)
+    EightyEighty::Instruction::Logical::CompareImmediate.run(state).should eq(7)
     state.a.should eq(1)
     state.pc.should eq(2)
     state.cc.zero.should be_false
@@ -33,7 +33,7 @@ describe EightyEighty::Instruction::Logical::CompareImmediate do
     state = EightyEighty::State.new
     state.memory = Bytes[0, 1]
     state.a = 2_u8
-    EightyEighty::Instruction::Logical::CompareImmediate.run(state)
+    EightyEighty::Instruction::Logical::CompareImmediate.run(state).should eq(7)
     state.a.should eq(2)
     state.pc.should eq(2)
     state.cc.zero.should be_false

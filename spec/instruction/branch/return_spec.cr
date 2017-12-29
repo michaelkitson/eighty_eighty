@@ -16,7 +16,7 @@ describe EightyEighty::Instruction::Branch::Return do
     state.memory[17].should eq(3)
     state.memory[18].should eq(0)
 
-    EightyEighty::Instruction::Branch::Return.run(state)
+    EightyEighty::Instruction::Branch::Return.run(state).should eq(10)
 
     state.pc.should eq(3)
     state.sp.should eq(19)

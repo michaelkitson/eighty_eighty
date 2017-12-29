@@ -7,5 +7,6 @@ module EightyEighty::Instruction::Logical::AndImmediate
     state.cc.carry = false
     state.cc.auxiliary_carry = false
     state.pc += 2
+    7
   end
 end

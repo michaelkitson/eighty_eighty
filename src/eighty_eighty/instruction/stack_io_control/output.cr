@@ -3,5 +3,6 @@ module EightyEighty::Instruction::StackIOControl::Output
   
     def self.run(state : State)
       state.pc += 2
+      10
     end
   end

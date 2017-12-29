@@ -8,7 +8,7 @@ describe EightyEighty::Instruction::StackIOControl::PushProcessorStatusWord do
     state.a = 1_u8
     state.cc.zero = true
     state.cc.carry = true
-    EightyEighty::Instruction::StackIOControl::PushProcessorStatusWord.run(state)
+    EightyEighty::Instruction::StackIOControl::PushProcessorStatusWord.run(state).should eq(11)
     state.a.should eq(1)
     state.pc.should eq(1)
     state.sp.should eq(8)

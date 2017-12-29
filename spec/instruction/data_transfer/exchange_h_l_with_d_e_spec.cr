@@ -7,7 +7,7 @@ describe EightyEighty::Instruction::DataTransfer::ExchangeHLWithDE do
     state.l = 2_u8
     state.d = 3_u8
     state.e = 4_u8
-    EightyEighty::Instruction::DataTransfer::ExchangeHLWithDE.run(state)
+    EightyEighty::Instruction::DataTransfer::ExchangeHLWithDE.run(state).should eq(4)
     state.h.should eq(3)
     state.l.should eq(4)
     state.d.should eq(1)

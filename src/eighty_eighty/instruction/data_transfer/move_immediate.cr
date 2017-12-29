@@ -4,5 +4,6 @@ module EightyEighty::Instruction::DataTransfer::MoveImmediate
   def self.run(state : State)
     state.destination_register = state.read_instruction_low_u8
     state.pc += 2
+    7
   end
 end

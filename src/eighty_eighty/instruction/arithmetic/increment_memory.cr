@@ -6,5 +6,6 @@ module EightyEighty::Instruction::Arithmetic::IncrementMemory
     state.cc.set_from(result)
     state.cc.carry = result == 0
     state.pc += 1
+    10
   end
 end

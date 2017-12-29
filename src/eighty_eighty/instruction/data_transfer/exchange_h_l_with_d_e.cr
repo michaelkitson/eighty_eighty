@@ -7,5 +7,6 @@ module EightyEighty::Instruction::DataTransfer::ExchangeHLWithDE
     state.hl = de
     state.de = hl
     state.pc += 1
+    4
   end
 end

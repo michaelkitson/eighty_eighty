@@ -7,5 +7,6 @@ module EightyEighty::Instruction::Logical::CompareImmediate
     state.cc.carry = state.a < imm
     state.cc.auxiliary_carry = (state.a & 0xF) < (imm & 0xF)
     state.pc += 2
+    7
   end
 end

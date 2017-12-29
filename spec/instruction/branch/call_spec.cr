@@ -6,7 +6,7 @@ describe EightyEighty::Instruction::Branch::Call do
     state.memory  = Bytes[0, 0xd4, 0x18, 0, 0, 0, 0, 0, 0, 0]
     state.sp = 9_u16 # Set up the stack at the bottom of the 10 byte memory slice
 
-    EightyEighty::Instruction::Branch::Call.run(state)
+    EightyEighty::Instruction::Branch::Call.run(state).should eq(17)
 
     state.pc.should eq(0x18d4)
     state.sp.should eq(7)

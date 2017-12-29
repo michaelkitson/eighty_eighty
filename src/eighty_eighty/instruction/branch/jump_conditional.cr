@@ -6,6 +6,7 @@ module EightyEighty::Instruction::Branch::JumpConditional
       Jump.run(state)
     else
       state.pc += 3
+      10
     end
   end
 end

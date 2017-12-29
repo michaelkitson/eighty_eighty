@@ -7,7 +7,7 @@ describe EightyEighty::Instruction::Arithmetic::DecrementRegister do
     state = EightyEighty::State.new
     state.memory = Bytes[base_op]
     state.b = 255_u8
-    EightyEighty::Instruction::Arithmetic::DecrementRegister.run(state)
+    EightyEighty::Instruction::Arithmetic::DecrementRegister.run(state).should eq(5)
     state.b.should eq(254)
     state.pc.should eq(1)
     state.cc.zero.should be_false
@@ -19,7 +19,7 @@ describe EightyEighty::Instruction::Arithmetic::DecrementRegister do
   it "decrements c" do
     state = EightyEighty::State.new
     state.memory = Bytes[base_op | 0b1000]
-    EightyEighty::Instruction::Arithmetic::DecrementRegister.run(state)
+    EightyEighty::Instruction::Arithmetic::DecrementRegister.run(state).should eq(5)
     state.c.should eq(255)
     state.pc.should eq(1)
     state.cc.zero.should be_false

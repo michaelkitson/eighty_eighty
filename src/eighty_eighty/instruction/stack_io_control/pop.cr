@@ -5,5 +5,6 @@ module EightyEighty::Instruction::StackIOControl::Pop
     state.register_pair = (state.memory[state.sp + 1].to_u16 << 8) + state.memory[state.sp]
     state.sp += 2
     state.pc += 1
+    10
   end
 end

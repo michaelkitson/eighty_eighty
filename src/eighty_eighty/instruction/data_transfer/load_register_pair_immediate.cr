@@ -11,5 +11,6 @@ module EightyEighty::Instruction::DataTransfer::LoadRegisterPairImmediate
     when 3 then state.sp = u16
     end
     state.pc += 3
+    10
   end
 end

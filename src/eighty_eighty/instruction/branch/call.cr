@@ -8,6 +8,7 @@ module EightyEighty::Instruction::Branch::Call
       state.memory[state.sp - 2] = state.pc.to_u8
       state.sp -= 2
       state.pc = new_pc
+      17
     end
   end
   

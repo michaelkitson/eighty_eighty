@@ -7,7 +7,7 @@ describe EightyEighty::Instruction::StackIOControl::Push do
     state.sp = 10_u16
     state.b = 1_u8
     state.c = 2_u8
-    EightyEighty::Instruction::StackIOControl::Push.run(state)
+    EightyEighty::Instruction::StackIOControl::Push.run(state).should eq(11)
     state.b.should eq(1)
     state.c.should eq(2)
     state.pc.should eq(1)
@@ -20,7 +20,7 @@ describe EightyEighty::Instruction::StackIOControl::Push do
     state.sp = 10_u16
     state.d = 1_u8
     state.e = 2_u8
-    EightyEighty::Instruction::StackIOControl::Push.run(state)
+    EightyEighty::Instruction::StackIOControl::Push.run(state).should eq(11)
     state.d.should eq(1)
     state.e.should eq(2)
     state.pc.should eq(1)
@@ -33,7 +33,7 @@ describe EightyEighty::Instruction::StackIOControl::Push do
     state.sp = 10_u16
     state.h = 1_u8
     state.l = 2_u8
-    EightyEighty::Instruction::StackIOControl::Push.run(state)
+    EightyEighty::Instruction::StackIOControl::Push.run(state).should eq(11)
     state.h.should eq(1)
     state.l.should eq(2)
     state.pc.should eq(1)

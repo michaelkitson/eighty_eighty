@@ -7,5 +7,6 @@ module EightyEighty::Instruction::StackIOControl::Push
     state.memory[state.sp - 2] = value.to_u8
     state.sp -= 2
     state.pc += 1
+    11
   end
 end

@@ -5,7 +5,7 @@ describe EightyEighty::Instruction::StackIOControl::PopProcessorStatusWord do
     state = EightyEighty::State.new
     state.memory = Bytes[0, 0, 0, 0, 0, 0, 0, 0, 150, 1]
     state.sp = 8_u16
-    EightyEighty::Instruction::StackIOControl::PopProcessorStatusWord.run(state)
+    EightyEighty::Instruction::StackIOControl::PopProcessorStatusWord.run(state).should eq(10)
     state.a.should eq(1)
     state.pc.should eq(1)
     state.sp.should eq(10)
