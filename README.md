@@ -4,6 +4,10 @@ An Intel 8080 emulator, implemented with the goal of sunning Space Invaders, in 
 
 Still a WIP, see the screenshots and known issues.
 
+![title screenshot](https://github.com/michaelkitson/eighty_eighty/blob/master/screenshots/title.png)
+
+![demo screenshot](https://github.com/michaelkitson/eighty_eighty/blob/master/screenshots/demo.png)
+
 ## Known Issues and Incomplete Parts
 - Keyboard Support
 - Sound Support
