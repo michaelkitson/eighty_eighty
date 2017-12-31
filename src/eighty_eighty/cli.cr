@@ -18,15 +18,7 @@ module EightyEighty
     end
 
     def run
-      rom_file = File.open(@filename)
-      state = State.new
-      bytes_read = rom_file.read(state.memory)
-      puts "Read #{bytes_read} bytes"
-      printf "Initializing PC to 0x%02b\n", @start_address
-      state.pc = @start_address
-
-      app = App.new
-      # Emulator.new(state).run
+      App.new(@filename).run
     end
 
     private def parse_arguments
