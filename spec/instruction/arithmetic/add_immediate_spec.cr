@@ -1,7 +1,7 @@
 require "../../spec_helper"
 
 describe EightyEighty::Instruction::Arithmetic::AddImmediate do
-  it "adds the an immediate" do
+  it "adds an immediate" do
     state = EightyEighty::State.new
     state.memory = Bytes[0, 15]
     state.a = 1_u8
