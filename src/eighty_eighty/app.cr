@@ -14,8 +14,6 @@ module EightyEighty
       state = State.new
       bytes_read = rom_file.read(state.memory)
       puts "Read #{bytes_read} bytes"
-      # printf "Initializing PC to 0x%02b\n", @start_address
-      # state.pc = @start_address
 
       @window = Window.new(224, 256)
       @emulator = Emulator.new(state)

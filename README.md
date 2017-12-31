@@ -1,6 +1,15 @@
 # eighty_eighty
 
-TODO: Write a description here
+An Intel 8080 emulator, implemented with the goal of sunning Space Invaders, in [crystal](https://crystal-lang.org/)
+
+Still a WIP, see the screenshots and known issues.
+
+## Known Issues and Incomplete Parts
+- Keyboard Support
+- Sound Support
+- Support window closing
+- Implement missing instructions (DAA, CMC, ADC, ACI, RST, and SPHL)
+- Finish documentation
 
 ## Installation
 

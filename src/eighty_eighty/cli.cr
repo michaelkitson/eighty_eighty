@@ -24,8 +24,8 @@ module EightyEighty
     private def parse_arguments
       OptionParser.parse! do |parser|
         parser.banner = "Usage: eightyeighty [options] <rom>"
-        parser.on("-d", "--disassemble", "Print the disassembly of the rom file") { @disassemble = true }
-        parser.on("-a", "--start-address", "Start executing from the given hex address. default: 0") { |address| @start_address = address.to_u16 }
+        # parser.on("-d", "--disassemble", "Print the disassembly of the rom file") { @disassemble = true }
+        # parser.on("-a", "--start-address", "Start executing from the given hex address. default: 0") { |address| @start_address = address.to_u16 }
         parser.on("-h", "--help", "Show this help") { puts parser; exit(0) }
         parser.unknown_args do |files|
           if files.first?.nil?
