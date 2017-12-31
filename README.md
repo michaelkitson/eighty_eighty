@@ -1,6 +1,6 @@
 # eighty_eighty
 
-An Intel 8080 emulator, implemented with the goal of sunning Space Invaders, in [crystal](https://crystal-lang.org/)
+An Intel 8080 emulator, implemented with the goal of running Space Invaders, in [crystal](https://crystal-lang.org/)
 
 Still a WIP, see the screenshots and known issues.
 
