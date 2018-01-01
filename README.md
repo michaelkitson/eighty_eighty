@@ -14,6 +14,8 @@ Still a WIP, see the screenshots and known issues.
 - Support window closing
 - Implement missing instructions (DAA, CMC, ADC, ACI, RST, and SPHL)
 - Finish documentation
+- Fix Auxiliary Carry flag logic, which is implemented all wrong.
+- Profile and optimize
 
 ## Installation
 
